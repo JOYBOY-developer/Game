@@ -1,0 +1,158 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+  margin: 0;
+  padding: 0;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  /* Add top margin for spacing */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* Space between rows */
+}
+
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  transition: all 0.3s ease;
+  /* Smooth transition for scaling */
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.545);
+}
+
+.green {
+  background-color: rgba(0, 128, 0, 0.712);
+}
+
+.blue {
+  background-color: rgba(0, 0, 255, 0.726);
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.654);
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.flash {
+  /* background-color: #012d5d; */
+  background-color: black;
+}
+
+.start {
+  color: #FEF2BF;
+  background-color: #012d5d;
+  height: 2.5rem;
+  width: fit-content;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  padding: .5rem;
+  margin-top: 2rem;
+  border: 2px solid #fef2bfbd;
+  cursor: pointer;
+}
+
+.start:active {
+  background-color: #fef2bfbd;
+}
+
+/* Media Query for smaller screens (like mobile) */
+@media screen and (max-width: 768px) {
+  #level-title {
+    font-size: 2.5rem;
+    /* Slightly smaller title */
+    margin: 3%;
+  }
+
+  .btn {
+    height: 150px;
+    /* Reduce button size */
+    width: 150px;
+    margin: 10px;
+    font-size: 1rem;
+    /* Adjust text size */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .start {
+    font-size: 1rem;
+    padding: .5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #level-title {
+    font-size: 1.8rem;
+    /* Further reduce font size for mobile */
+    margin: 10px;
+  }
+
+  .btn {
+    height: 120px;
+    /* Further reduce button size */
+    width: 120px;
+    margin: 8px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .row {
+    flex-direction: row;
+    /* Keep buttons in rows */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap if needed */
+  }
+
+  .start {
+    font-size: 1.1rem;
+    padding: .5rem;
+    margin-top: 1rem;
+  }
+}
